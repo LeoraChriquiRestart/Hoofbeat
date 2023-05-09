@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Hoofbeat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <div class="left-box">
+            
+        <div class="options accueil">
+            <span class="material-symbols-outlined">home</span>
+            <h2>Accueil</h2>
+        </div>
+            
+        <div class="options">
+            <span class="material-symbols-outlined">login</span>               
+            <h2>Connexion</h2>
+        </div>
+            
+        <div class="options">
+            <span class="material-symbols-outlined">stylus</span>
+            <h2>Inscription</h2>
+        </div>
+
+        <div class="options">
+            <span class="material-symbols-outlined">more_horiz</span>
+            <h2>Plus</h2>
+        </div>
+
+        <button class="post-box__post-button" id="mon-bouton">Post</button>
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="post-box__input">
+                    <img src="https://media.idownloadblog.com/wp-content/uploads/2017/03/Twitter-new-2017-avatar-001.png" alt="avatar">
+                    <input type="text" placeholder="Quoi de neuf ?">
+                    <button class="post-box__post-button">Post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main__header">
+            <h2>Accueil</h2>
+        </div>
+        <div class="post-box">
+            <form>
+                <div class="post-box__input">
+                    <img src="https://media.idownloadblog.com/wp-content/uploads/2017/03/Twitter-new-2017-avatar-001.png" alt="avatar">
+                    <input type="text" placeholder="Quoi de neuf ?">
+                </div>
+                <button class="post-box__post-button" id="mon-bouton">Post</button>
+            </form>
+        </div>
+        <div class="feed">
+            <div class="feed__avatar">
+                <img src="https://media.idownloadblog.com/wp-content/uploads/2017/03/Twitter-new-2017-avatar-001.png" alt="">
+            </div>
+            <div class="feed__body">
+                <div class="feed__header">
+                    <div class="feed__header-text">
+                        <h3>
+                            Name
+                            <span class="feed__header-name">@username</span>
+                        </h3>
+                    </div>
+                    <div class="feed__header-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
+                </div>
+                <img src="background.webp" alt="">
+                <div class="feed__footer">
+                    <span class="material-symbols-outlined" id="like">favorite</span>
+                    <span class="material-symbols-outlined">chat_bubble</span>
+                    <span class="material-symbols-outlined" id="delete">delete</span>
+                </div>
+            </div>
+        </div>
+        <div class="feed">
+            <div class="feed__avatar">
+                <img src="https://media.idownloadblog.com/wp-content/uploads/2017/03/Twitter-new-2017-avatar-001.png" alt="">
+            </div>
+            <div class="feed__body">
+                <div class="feed__header">
+                    <div class="feed__header-text">
+                        <h3>
+                            Name
+                            <span class="feed__header-name">@username</span>
+                        </h3>
+                    </div>
+                    <div class="feed__header-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
+                </div>
+                <img src="background.webp" alt="">
+                <div class="feed__footer">
+                    <span class="material-symbols-outlined" id="like">favorite</span>
+                    <span class="material-symbols-outlined">chat_bubble</span>
+                    <span class="material-symbols-outlined" id="delete">delete</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-box">
+        <div class="right-box__input">
+            <span class="material-symbols-outlined right-box__search-icon">search</span>
+            <input type="text" placeholder="Rechercher">
+        </div>
+        <div class="right-box__tag">
+            <h2>Tags</h2>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>    
+</body>
+</html>
