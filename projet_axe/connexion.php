@@ -1,3 +1,7 @@
+<?php
+require_once("connexion_db.php");
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,11 +14,15 @@
 </head>
 <body>
     <main>
-        <form class="form" method="POST" action="connexion_db.php">
+        <form class="form" method="POST">
             <h1>Connexion</h1>
             <input type="text" name="pseudo" placeholder="Pseudo">
             <input type="password" name="mdp" placeholder="Mot de passe">
             <button type="submit">Envoyer</button>
+
+            <?php if (isset($erreur)) { ?>
+                <p style="color: red; margin-top: 24px;"><?= $erreur ?></p>
+            <?php } ?>
         </form>
     </main>
 </body>

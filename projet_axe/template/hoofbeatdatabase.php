@@ -10,4 +10,6 @@ try {
     die("BOOM");
 }
 
+session_start();
+
 ?>

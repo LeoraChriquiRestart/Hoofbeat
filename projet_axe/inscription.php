@@ -1,3 +1,7 @@
+<?php
+require_once("inscription_db.php");
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,7 +14,7 @@
 <body>
 
     <main>
-        <form class="form" method="POST" action="inscription_db.php">
+        <form class="form" method="POST">
             <h1>Inscription</h1>
             <input type="text" name="nom" placeholder="Prénom">
             <input type="text" name="pseudo" placeholder="Pseudo">

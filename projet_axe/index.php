@@ -22,6 +22,9 @@
     
 </head>
 <body>
+    <header>
+        <img src="" alt="">
+    </header>
     
 <!--Left-box-->
     <?php require "template/hoofbeatnav.php"; ?>
@@ -41,7 +44,21 @@
                 <button class="post-box__post-button">Post</button>
             </form>
         </div>
-        <?php  foreach($allCourses as $course) { ?>
+        <?php  foreach($allCourses as $course) {
+
+            $autheur_id = $course['author_id'];
+            
+            $data = [
+                "id" => $autheur_id
+            ];
+
+            $requete = $database->prepare("SELECT * FROM utilisateurs WHERE id = :id");
+            $requete->execute($data);
+            $user = $requete->fetch(PDO::FETCH_ASSOC);    
+
+            $pseudo = $user["pseudo"];
+            $nom = $user["nom"];
+        ?>
             <div class="feed">
                 <div class="feed__avatar">
                     <img src="https://media.idownloadblog.com/wp-content/uploads/2017/03/Twitter-new-2017-avatar-001.png" alt="">
@@ -50,8 +67,8 @@
                     <div class="feed__header">
                         <div class="feed__header-text">
                             <h3>
-                                    <p><?= $course['nom'] ?></p>
-                                    <span class="feed__header-name">@<?= $course['pseudo'] ?></span>
+                                    <p><?= $nom ?></p>
+                                    <span class="feed__header-name">@<?= $pseudo ?></span>
                             </h3>
                         </div>
                         <div class="feed__header-description">
