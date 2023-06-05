@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : dim. 21 mai 2023 à 13:31
+-- Généré le : lun. 05 juin 2023 à 10:01
 -- Version du serveur : 8.0.30
 -- Version de PHP : 8.1.10
 
@@ -29,8 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `posts` (
   `id` int NOT NULL,
-  `nom` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
-  `pseudo` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
+  `author_id` int NOT NULL,
   `contenu` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
   `tag` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -40,10 +39,9 @@ CREATE TABLE `posts` (
 -- Déchargement des données de la table `posts`
 --
 
-INSERT INTO `posts` (`id`, `nom`, `pseudo`, `contenu`, `tag`, `date`) VALUES
-(14, 'Emmanuel', 'wingman', 'Hello !', '#Random', '2023-05-21 14:42:13'),
-(16, 'Léora', 'mimanouma', 'Séance de fou aujourd\'hui :\')', '#Club', '2023-05-21 14:45:31'),
-(19, 'Léora', 'mimanouma', 'C\'est long et je galère', '#Random', '2023-05-21 15:07:29');
+INSERT INTO `posts` (`id`, `author_id`, `contenu`, `tag`, `date`) VALUES
+(26, 7, 'fsjdfoskfjsof', 'dfksjdflsk', '2023-05-30 16:40:52'),
+(27, 8, 'moi', 'moi', '2023-05-30 16:42:00');
 
 -- --------------------------------------------------------
 
@@ -66,7 +64,8 @@ CREATE TABLE `utilisateurs` (
 INSERT INTO `utilisateurs` (`id`, `nom`, `pseudo`, `mail`, `mdp`) VALUES
 (2, 'Emmanuel', 'wingman', 'emmanuel@gmail.com', 'lalala'),
 (3, 'florence', 'floreflo', 'florence@gmail.com', 'coucou'),
-(6, 'Léora', 'mimanouma', 'leora.chriqui@gmail.com', 't4yMbAMWtYgkW5w');
+(7, 'Léora', 'mimanouma', 'leora@chriqui', '$2y$10$xorTeK.Y5NgKq3z0dgHrrO99mSDC6JKFPcR5KVNSST5bb5bnLg84W'),
+(8, 'Moi', 'tjrsmoi', 'moi@moi.moi', '$2y$10$p8COLPfPmm15/bwrJZptGeWpbhZlSSnhAlGMPo26yPIOD3ejIEydm');
 
 --
 -- Index pour les tables déchargées
@@ -92,13 +91,13 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
