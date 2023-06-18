@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
 
+@import url("css/modal.css");
+
 * {
     margin:0;
     padding: 0;
@@ -22,6 +24,7 @@ body {
     margin-right: auto;
     padding: 0px 10px;
     background-color: var(--back);
+    overflow: hidden;
 }
 
 .container{
@@ -30,6 +33,10 @@ body {
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+
+    flex-grow: 1;
+
+    min-height: 1px;
 }
 
 /*header*/
@@ -40,10 +47,35 @@ header{
 }
 
 header img{
-    height: 50px;
-    width: 50px;
+    height: 75px;
+    width: 75px;
 }
 
+header h1{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+header h1 {
+
+    background-image: linear-gradient(90deg, var(--main-color), rgb(255, 255, 255));
+    background-size: 100% 100%;
+  
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+  
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  
+    animation: titre 2s infinite;
+}
+
+@keyframes titre {
+    0% { background-position-x: 0%; }
+    50% { background-position-x: 100%; }
+    100% { background-position-x: 0%; }
+}
 
 /*Left box */
 
@@ -82,15 +114,22 @@ header img{
     color: var(--main-color);
 }
 
+.options a{
+    text-decoration: none;
+}
+
+
 /* Main box */
 
 /* Partie pour poster*/
 .main{
     flex: 0.5;
     border-right: 1px solid var(--background-color);
-    min-width: fit-content;
-    overflow-y: scroll;
+    
     height: 100%;
+    
+    min-width: fit-content;
+    overflow-y: auto;
 }
 
 .main__header {
@@ -243,24 +282,47 @@ header img{
     font-weight: 700;
 }
 
-/* Modal */
 
-.modal {
-    display: none; 
-    position: fixed; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(0,0,0,0.4); 
+/*Couleur tag*/
+
+#tag1 {
+    color: rgb(192, 192, 192);
 }
-  
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 40%; 
+
+#tag2 {
+    color:rgb(255, 255, 255);
+}
+
+#tag3 {
+    color: rgb(255, 228, 225);
+}
+
+#tag4 {
+    color:rgb(211, 211, 211);
+}
+
+#tag5 {
+    color:rgb(255, 255, 224);
+}
+
+#tag6 {
+    color:rgb(152, 255, 152);
+}
+
+#tag7 {
+    color:rgb(64, 224, 208);
+}
+
+#tag8 {
+    color:rgb(135, 206, 250);
+}
+
+#tag9 {
+    color:rgb(255, 215, 0);
+}
+
+#tag10 {
+    color:rgb(224, 176, 255);
 }
 
 /* Responsive */
