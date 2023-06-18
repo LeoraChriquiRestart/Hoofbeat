@@ -68,8 +68,8 @@
                         <div class="feed__header">
                             <div class="feed__header-text">
                                 <h3>
-                                        <p><?= $nom ?></p>
-                                        <span class="feed__header-name">@<?= $pseudo ?></span>
+                                    <p><?= $nom ?></p>
+                                    <span class="feed__header-name">@<?= $pseudo ?></span>
                                 </h3>
                             </div>
                             <div class="feed__header-description">
@@ -80,14 +80,15 @@
 
                             </div>
                         </div>
-                        <img src="background.webp" alt="">
                         <div class="feed__footer">
-                            <span class="material-symbols-outlined" id="like">favorite</span>
+                            <span class="material-symbols-outlined">favorite</span>
                             <span class="material-symbols-outlined">chat_bubble</span>
                             <span class="material-symbols-outlined" id="delete">
                                 <form action="delete.php" method="POST">
                                     <input type="hidden" name="supp" value="<?= $course['id'] ?>">
-                                    <button type="submit">Supprimer</button>
+                                    <button type="submit">
+                                    <span class="material-symbols-outlined">delete</span>
+                                    </button>
                                 </form>
                             </span>
                         </div>
@@ -106,7 +107,7 @@
                 <ul>
                     <li>Ethologie</li>
                     <li>Bien être</li>
-                    <li>Saut d'obstacles</li>
+                    <li>Saut</li>
                     <li>Random</li>
                     <li>Dressage</li>
                     <li>Club</li>
@@ -116,6 +117,15 @@
                     <li>Loisirs</li>
                 </ul>
             </div>
+        </div>
+        <div class="modal">
+            <div class="modal__header">
+                <p>Confirmation de la suppresion</p>
+                <span class="close">&times;</span>
+            </div>
+            
+            <button>Supprimer</button>
+        
         </div>
     </div>
 
