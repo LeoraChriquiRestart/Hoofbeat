@@ -81,16 +81,20 @@
                             </div>
                         </div>
                         <div class="feed__footer">
-                            <span class="material-symbols-outlined">favorite</span>
-                            <span class="material-symbols-outlined">chat_bubble</span>
-                            <span class="material-symbols-outlined" id="delete">
-                                <form action="delete.php" method="POST">
-                                    <input type="hidden" name="supp" value="<?= $course['id'] ?>">
-                                    <button type="submit">
-                                    <span class="material-symbols-outlined">delete</span>
-                                    </button>
-                                </form>
-                            </span>
+                            <button class="suppButton">
+                                <span class="material-symbols-outlined">delete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal__supp">
+                        <div class="modal-content">
+                            <form action="delete.php" method="POST">
+                                <input type="hidden" name="supp" value="<?= $course['id'] ?>">
+                                <p>Confirmation de la suppression</p>
+                                <button type="submit">
+                                    <p>Supprimer</p>
+                                </button>
+                            </form>
                         </div>
                     </div>  
                 </div>
@@ -118,18 +122,17 @@
                 </ul>
             </div>
         </div>
-        <div class="modal">
-            <div class="modal__header">
-                <p>Confirmation de la suppresion</p>
+    </div>
+    <div class="modal">
+        <div class="modal-content">
+            <form class="form" method="POST" action="post.php">
                 <span class="close">&times;</span>
-            </div>
-            
-            <button>Supprimer</button>
-        
+                <button class="post-box__post-button">Post</button>
+            </form>
         </div>
     </div>
+    
+    <script src="main.js"></script>  
 
-
-    <script src="script.js"></script>    
 </body>
 </html>
