@@ -28,9 +28,9 @@
     </div>
 
     <div class="options">
-        <span class="material-symbols-outlined">more_horiz</span>
+        <span class="material-symbols-outlined">person</span>
         <h2>
-            <a href="plus.php">Plus</a>
+            <a href="profil.php">Profil</a>
         </h2>
     </div>
     
@@ -63,5 +63,3 @@
         </div>
     </div>
 </nav>
-
-                
