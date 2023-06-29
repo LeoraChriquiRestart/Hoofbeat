@@ -4,9 +4,94 @@
 @import url('style.css');
 @import url('modal.css');
 
-.profil{
+.profil-container {
     display: flex;
+    border-right: 1px solid var(--background-color);
+    
+    height: 100%;
+    
+    min-width: fit-content;
+}
+
+.profil{
+    flex: 0.5;
     margin-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.profil__header {
+    text-align: center;
+}
+
+.profil__post{
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--background-color);
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.profil__post-avatar img {
+    border-radius: 50%;
+    height: 60px;
+}
+
+
+.profil__post-header {
+    align-items: flex-start;
+    border-bottom: 1px solid var(--background-color);
+    padding-bottom: 10px;
+}
+
+.profil__post-body img{
+    width: 450px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.profil__post-header {
+    margin-top: 10px;
+}
+
+.profil__post-header button{
+    cursor: pointer;
+}
+
+.profil__post-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(54, 53, 53);
+}
+
+.profil__post-text h3{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.profil__post-description {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.profil__post-body {
+    padding: 10px;
+}
+
+.profil__tags {
+    flex: 0.3;
+    margin-left: 20px;
+    margin-top: 15px;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    height: fit-content;
+    
+}
+
+.profil__tags h2 {
+    font-size: 25px;
+    font-weight: 700;
 }
