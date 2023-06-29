@@ -13,7 +13,7 @@
 body {
     --main-color: #5715a2;
     --background-color: rgb(214, 196, 214);
-    --back: rgba(208, 176, 208, 0.209); 
+    --back: rgba(208, 176, 208, 0.209);
 }
 
 body {
@@ -338,5 +338,4 @@ body {
     .right-box__tag h2{
         display: none;
     }
-   
 }
