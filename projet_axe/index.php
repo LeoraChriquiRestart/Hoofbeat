@@ -8,7 +8,6 @@
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -60,7 +59,7 @@
                 $pseudo = $user["pseudo"];
                 $nom = $user["nom"];
             ?>
-                <div class="feed">
+                <div class="feed tags_<?= $course['tag']?>">
                     <div class="feed__avatar">
                         <img src="https://media.idownloadblog.com/wp-content/uploads/2017/03/Twitter-new-2017-avatar-001.png" alt="">
                     </div>
@@ -118,15 +117,16 @@
             <div class="right-box__tag">
                 <h2>Tags</h2>
                 <button class="tags">Tout</button>
-                <button class="tags">Ethologie</button>
-                <button class="tags">Bien être</button>
-                <button class="tags">Saut</button>
-                <button class="tags">Random</button>
-                <button class="tags">Dressage</button>
-                <button class="tags">Club</button>
-                <button class="tags">Propriétaire</button>
-                <button class="tags">TAP</button>
-                <button class="tags">Loisirs</button>
+                <button class="tags">#Ethologie</button>
+                <button class="tags">#Bien être</button>
+                <button class="tags">#Saut</button>
+                <button class="tags">#Random</button>
+                <button class="tags">#Dressage</button>
+                <button class="tags">#Club</button>
+                <button class="tags">#Propriétaire</button>
+                <button class="tags">#Compétition</button>
+                <button class="tags">#TAP</button>
+                <button class="tags">#Loisirs</button>
             </div>
         </div>
     </div>

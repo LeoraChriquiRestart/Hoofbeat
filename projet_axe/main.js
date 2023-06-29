@@ -59,3 +59,22 @@ window.onload = function () {
 
 // Filtre de tags
 
+const btns = document.querySelectorAll('button.tags');
+
+btns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const clickedTag = btn.innerHTML;
+    const posts = document.querySelectorAll(`.feed`);
+    
+    posts.forEach(post => {
+      if (clickedTag  == "Tout") {
+        post.style.display= "flex";
+      } else {
+        post.style.display= "none";
+        if(post.classList[1].includes(clickedTag)) {
+          post.style.display= "flex";
+        }
+      }
+    });
+  });
+});
