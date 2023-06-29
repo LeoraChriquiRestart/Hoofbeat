@@ -57,5 +57,5 @@ window.onload = function () {
   localStorage.clear();
 }
 
-// Fond flou
+// Filtre de tags
 

@@ -28,24 +28,92 @@
         <?php require "template/hoofbeatnav.php"; ?>
         
         <div class="profil">
+            
             <section class="profil__header">
-                <h2>Bonjour Léora, voici ton profil</h2>
+                <h2>Voici ton profil</h2>
             </section>
-            <section class="profil__description">
-                <div class="avatar">
-                    <img src="https://media.idownloadblog.com/wp-content/uploads/2017/03/Twitter-new-2017-avatar-001.png" alt="avatar">
-                </div>
-                <div class="informations">
-                    <p>Prénom</p>
-                    <p>Pseudo</p>
-                    <p>Mail</p>
-                </div>
-            </section>
-            <section class="profil__post">
+            
+            <?php  foreach($allCourses as $course) {
+                $autheur_id = $course['author_id'];
 
-            </section>
+                if ($autheur_id == $_SESSION['id']) {
+                    $data = [
+                        "id" => $autheur_id
+                    ];
+
+                    $requete = $database->prepare("SELECT * FROM utilisateurs WHERE id = :id");
+                    $requete->execute($data);
+                    $user = $requete->fetch(PDO::FETCH_ASSOC);
+
+                    $pseudo = $user["pseudo"];
+                    $nom = $user["nom"];
+                ?>
+                
+                <div class="profil__post">
+                    <div class="profil__post-avatar">
+                        <img src="https://media.idownloadblog.com/wp-content/uploads/2017/03/Twitter-new-2017-avatar-001.png" alt="">
+                    </div>
+                    <div class="profil__post-body">
+                        <div class="profil__post-header">
+                            <div class="profil__post-text">
+                                <h3>
+                                    <p><?= $nom ?></p>
+                                    <span class="profil__post-name">@<?= $pseudo ?></span>
+                                </h3>
+                            </div>
+                            <div class="profil__post-description">
+                                    
+                                <p><?= $course['contenu'] ?></p>
+                                <p><?= $course['tag']?></p>
+                                <img class="media" src="<?= $course['images']?>" alt="image">
+                                <p><?= $course['date']?></p>
+
+                            </div>
+                        </div>
+                        <div class="post__footer">
+                            <?php if (isset($_SESSION['id']) && $_SESSION['id'] == $autheur_id) { ?>
+                                <button class="suppButton">
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            <?php } ?>
+                        </div>
+                    </div>
+                    <div class="modal__supp">
+                        <div class="modal-content">
+                            <p>Confirmation de la suppression</p>
+                            <div class="deleteButtons">
+                                <form action="delete.php" method="POST">
+                                    <input type="hidden" name="supp" value="<?= $course['id'] ?>">
+                                    <button class="confirmButton" type="submit">
+                                        Supprimer
+                                    </button>
+                                </form>
+                                <button class="undoButton">
+                                    Annuler
+                                </button>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+                <?php } ?>
+            <?php } ?>
         </div>
-
+        <section class="profil__tags">
+            <h2>Tags</h2>
+            <ul>
+                <li>Ethologie</li>
+                <li>Bien être</li>
+                <li>Saut</li>
+                <li>Random</li>
+                <li>Dressage</li>
+                <li>Club</li>
+                <li>Propriétaire</li>
+                <li>Competition</li>
+                <li>TAP</li>
+                <li>Loisirs</li>
+            </ul>
+        </section>
+                                    
     </div>
 </body>
 </html>

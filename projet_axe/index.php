@@ -80,16 +80,13 @@
                                 <p><?= $course['date']?></p>
 
                             </div>
-                            <div class="feed__header-images">
-
-                            </div>
                         </div>
                         <div class="feed__footer">
-                            <button class="suppButton">
-                                <?php if (isset($_SESSION['id']) && $_SESSION['id'] == $autheur_id) { ?>
+                            <?php if (isset($_SESSION['id']) && $_SESSION['id'] == $autheur_id) { ?>
+                                <button class="suppButton">
                                     <span class="material-symbols-outlined">delete</span>
-                                <?php } ?>
-                            </button>
+                                </button>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="modal__supp">
@@ -120,18 +117,16 @@
             </div>
             <div class="right-box__tag">
                 <h2>Tags</h2>
-                <ul>
-                    <li>Ethologie</li>
-                    <li>Bien être</li>
-                    <li>Saut</li>
-                    <li>Random</li>
-                    <li>Dressage</li>
-                    <li>Club</li>
-                    <li>Propriétaire</li>
-                    <li>Competition</li>
-                    <li>TAP</li>
-                    <li>Loisirs</li>
-                </ul>
+                <button class="tags">Tout</button>
+                <button class="tags">Ethologie</button>
+                <button class="tags">Bien être</button>
+                <button class="tags">Saut</button>
+                <button class="tags">Random</button>
+                <button class="tags">Dressage</button>
+                <button class="tags">Club</button>
+                <button class="tags">Propriétaire</button>
+                <button class="tags">TAP</button>
+                <button class="tags">Loisirs</button>
             </div>
         </div>
     </div>
