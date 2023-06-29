@@ -54,4 +54,8 @@ Pform.addEventListener('input', function(textStorage){
 
 window.onload = function () {
   Pform.value = localStorage.getItem('Pform');
+  localStorage.clear();
 }
+
+// Fond flou
+

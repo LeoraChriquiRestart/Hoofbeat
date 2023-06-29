@@ -86,7 +86,9 @@
                         </div>
                         <div class="feed__footer">
                             <button class="suppButton">
-                                <span class="material-symbols-outlined">delete</span>
+                                <?php if (isset($_SESSION['id']) && $_SESSION['id'] == $autheur_id) { ?>
+                                    <span class="material-symbols-outlined">delete</span>
+                                <?php } ?>
                             </button>
                         </div>
                     </div>
@@ -107,6 +109,7 @@
                         </div>
                     </div>  
                 </div>
+                
             <?php } ?>
         </div>
         <!--Right-box-->
