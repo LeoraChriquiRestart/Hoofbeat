@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : lun. 05 juin 2023 à 10:01
+-- Généré le : jeu. 29 juin 2023 à 08:49
 -- Version du serveur : 8.0.30
 -- Version de PHP : 8.1.10
 
@@ -31,6 +31,7 @@ CREATE TABLE `posts` (
   `id` int NOT NULL,
   `author_id` int NOT NULL,
   `contenu` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `images` blob,
   `tag` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -39,9 +40,10 @@ CREATE TABLE `posts` (
 -- Déchargement des données de la table `posts`
 --
 
-INSERT INTO `posts` (`id`, `author_id`, `contenu`, `tag`, `date`) VALUES
-(26, 7, 'fsjdfoskfjsof', 'dfksjdflsk', '2023-05-30 16:40:52'),
-(27, 8, 'moi', 'moi', '2023-05-30 16:42:00');
+INSERT INTO `posts` (`id`, `author_id`, `contenu`, `images`, `tag`, `date`) VALUES
+(123, 7, 'Un coucours au top aujourd\'hui !', 0x696d616765732f686f727365706f7374322e6a7067, '#Compétition', '2023-06-28 15:49:15'),
+(124, 10, 'Il vous surveille ;)', 0x696d616765732f686f727365706f7374342e6a7067, '#Propriétaire', '2023-06-28 15:51:08'),
+(125, 9, 'Toujours concentrée', 0x696d616765732f686f727365706f7374352e6a7067, '#Dressage', '2023-06-28 15:55:35');
 
 -- --------------------------------------------------------
 
@@ -62,10 +64,10 @@ CREATE TABLE `utilisateurs` (
 --
 
 INSERT INTO `utilisateurs` (`id`, `nom`, `pseudo`, `mail`, `mdp`) VALUES
-(2, 'Emmanuel', 'wingman', 'emmanuel@gmail.com', 'lalala'),
-(3, 'florence', 'floreflo', 'florence@gmail.com', 'coucou'),
 (7, 'Léora', 'mimanouma', 'leora@chriqui', '$2y$10$xorTeK.Y5NgKq3z0dgHrrO99mSDC6JKFPcR5KVNSST5bb5bnLg84W'),
-(8, 'Moi', 'tjrsmoi', 'moi@moi.moi', '$2y$10$p8COLPfPmm15/bwrJZptGeWpbhZlSSnhAlGMPo26yPIOD3ejIEydm');
+(8, 'Moi', 'tjrsmoi', 'moi@moi.moi', '$2y$10$p8COLPfPmm15/bwrJZptGeWpbhZlSSnhAlGMPo26yPIOD3ejIEydm'),
+(9, 'Elsa', 'Boubou', 'boubou@boubou.boubou', '$2y$10$O2npWLliBdTpPQTNzbAI6.0GufmfsFSlC3etWfamRowiT3pRR/oGq'),
+(10, 'eva', 'evalaba', 'eva@eva.eva', '$2y$10$um1PP3hCIaK.pzFnMsMTz.G72eneZNU1P6XrhHVeat2nuOWsLOehu');
 
 --
 -- Index pour les tables déchargées
@@ -91,13 +93,13 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
