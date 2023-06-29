@@ -1,6 +1,6 @@
 // Modal de suppression
 let poubelle = document.querySelectorAll('.suppButton');
-
+let undo = document.querySelectorAll('.undoButton');
 
 if(poubelle != null){
   
@@ -12,28 +12,46 @@ if(poubelle != null){
   })
 }
 
+if(undo != null){
+  
+  undo.forEach(function(cancel) {
+    cancel.addEventListener("click", function(j) {
+    j.preventDefault() //Pas de lien
+    cancel.closest('.feed').querySelector('.modal__supp').style.display = "none";
+    })
+  })
+}
+
+// Modal de post
 
 const postButton = document.getElementById("mon-bouton");
-// Evenement suite au clic de la souris
+const modal = document.querySelector(".modal");
+
 postButton.addEventListener("click", () => {
-// Affichage de la fenêtre modale
     modal.style.display = "block";
 });
 
-
-const modal = document.querySelector(".modal");
 const closeButton = document.querySelector(".close");
 
-
-// Sélectionne le bouton de fermeture et ajoute un événement suite au clic pour fermer la fenêtre modale
 closeButton.addEventListener("click", () => {
-  // Ferme la fenêtre modale
   modal.style.display = "none";
 });
 
-// Fermeture de la fenetre quand on clique en dehors de celle ci
+// Fermeture de la fenetre quand on clique en dehors
 window.addEventListener("click", (event) => {
   if (event.target === modal) {
     modal.style.display = "none";
   }
 });
+
+// LocalStorage
+
+const Pform = document.getElementById('contenu');
+
+Pform.addEventListener('input', function(textStorage){
+  localStorage.setItem('Pform', textStorage.target.value);
+});
+
+window.onload = function () {
+  Pform.value = localStorage.getItem('Pform');
+}

@@ -76,7 +76,11 @@
                                 
                                 <p><?= $course['contenu'] ?></p>
                                 <p><?= $course['tag']?></p>
+                                <img class="media" src="<?= $course['images']?>" alt="image">
                                 <p><?= $course['date']?></p>
+
+                            </div>
+                            <div class="feed__header-images">
 
                             </div>
                         </div>
@@ -88,13 +92,18 @@
                     </div>
                     <div class="modal__supp">
                         <div class="modal-content">
-                            <form action="delete.php" method="POST">
-                                <input type="hidden" name="supp" value="<?= $course['id'] ?>">
-                                <p>Confirmation de la suppression</p>
-                                <button type="submit">
-                                    <p>Supprimer</p>
+                            <p>Confirmation de la suppression</p>
+                            <div class="deleteButtons">
+                                <form action="delete.php" method="POST">
+                                    <input type="hidden" name="supp" value="<?= $course['id'] ?>">
+                                    <button class="confirmButton" type="submit">
+                                        Supprimer
+                                    </button>
+                                </form>
+                                <button class="undoButton">
+                                    Annuler
                                 </button>
-                            </form>
+                            </div>
                         </div>
                     </div>  
                 </div>
