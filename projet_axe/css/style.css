@@ -173,7 +173,7 @@ body {
 }
 
 .feed__body img{
-    width: 450px;
+    width: 30vw;
     object-fit: contain;
     border-radius: 20px;
 }
@@ -312,6 +312,18 @@ body {
 
     .main {
         width: 100vw;
+    }
+    
+    .feed__avatar img {
+        width: 10vw;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .feed__body img{
+        width: 70vw;
+        object-fit: contain;
+        border-radius: 20px;
     }
 
     .right-box {
