@@ -5,28 +5,24 @@
             <a href="index.php">Accueil</a>
         </h2>        
     </div>
-            
-    <div class="options">
-        <span class="material-symbols-outlined">login</span>               
-        <h2>
-            <a href="connexion.php">Connexion</a>
-        </h2>
-    </div>
-    <?php if (isset($_SESSION['id'])) { ?>
+
+    <?php if (!isset($_SESSION['id'])) { ?>        
         <div class="options">
-            <span class="material-symbols-outlined">logout</span>
+            <span class="material-symbols-outlined">login</span>               
             <h2>
-                <a href="deconnexion.php">Déconnexion</a>
+                <a href="connexion.php">Connexion</a>
             </h2>
         </div>
     <?php } ?>
-            
-    <div class="options">
-        <span class="material-symbols-outlined">stylus</span>
-        <h2>
-            <a href="inscription.php">Inscription</a>
-        </h2>
-    </div>
+    
+    <?php if (!isset($_SESSION['id'])) { ?>
+        <div class="options">
+            <span class="material-symbols-outlined">stylus</span>
+            <h2>
+                <a href="inscription.php">Inscription</a>
+            </h2>
+        </div>
+    <?php } ?>
 
     <?php if (isset($_SESSION['id'])) { ?>
         <div class="options">
@@ -37,9 +33,19 @@
         </div>
     <?php } ?>
     
-
-    <button class="post-box__post-button" id="mon-bouton">Post</button>
+    <?php if (isset($_SESSION['id'])) { ?>
+        <div class="options">
+            <span class="material-symbols-outlined">logout</span>
+            <h2>
+                <a href="deconnexion.php">Déconnexion</a>
+            </h2>
+        </div>
+    <?php } ?>
     
+    <?php if (isset($_SESSION['id'])) { ?>
+        <button class="post-box__post-button" id="mon-bouton">Post</button>
+    <?php } ?>
+
     <div class="modal">
         <div class="modal-content">
             <form class="form" method="POST" action="post.php" enctype="multipart/form-data">
@@ -47,7 +53,7 @@
                 <div class="post-box__input">
                     <img src="https://media.idownloadblog.com/wp-content/uploads/2017/03/Twitter-new-2017-avatar-001.png" alt="avatar">
                     <input type="text" name="contenu" placeholder="Quoi de neuf ?" id="contenu">
-                    <select name="tag" id="tag" required>
+                    <select class="chooseTag" name="tag" id="tag" required>
                         <option value="">#</option>
                         <option id="tag1">#Ethologie</option>
                         <option id="tag2">#Bien être</option>
