@@ -44,6 +44,7 @@
                     <button class="post-box__post-button">Post</button>
                 </form>
             </div>
+
             <?php  foreach($allCourses as $course) {
 
                 $autheur_id = $course['author_id'];
@@ -105,8 +106,21 @@
                         </div>
                     </div>  
                 </div>
+                <div class="modal__flou">
+                    <h2>
+                        <a href="connexion.php">Je me connecte </a>
+                    </h2>
+                    <h2>
+                        <a href="inscription.php">Je m'inscris </a>
+                    </h2>
+                </div>
                 
             <?php } ?>
+
+            <?php if (!isset($_SESSION['id'])) { ?>
+                <script src="blur.js"></script>
+            <?php } ?>
+
         </div>
         <!--Right-box-->
         <div class="right-box">
