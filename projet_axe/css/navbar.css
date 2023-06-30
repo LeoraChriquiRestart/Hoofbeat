@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
+
+@import url('style.css');
+@import url('modal.css');
+
+.left-box {
+    border-right: 1px solid var(--background-color);
+    flex: 0.2;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.options .material-symbols-outlined {
+    padding: 20px;
+}
+
+.options h2 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.options:hover {
+    background-color: var(--background-color);
+    border-radius: 30px;
+    color: var(--main-color);
+    transition: color 100ms ease-out;
+}
+
+.options.accueil {
+    color: var(--main-color);
+}
+
+.options a{
+    text-decoration: none;
+}
