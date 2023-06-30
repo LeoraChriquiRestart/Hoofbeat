@@ -78,3 +78,13 @@ btns.forEach(btn => {
     });
   });
 });
+
+//Navbar
+
+const menu_toggle = document.querySelector('.menu-toggle');
+const sidebar = document.querySelector('.left-box');
+
+menu_toggle.addEventListener('click', () => {
+  menu_toggle.classList.toggle('is-active');
+  sidebar.classList.toggle('is-active');
+});

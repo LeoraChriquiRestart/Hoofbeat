@@ -24,9 +24,16 @@
     <header>
         <img src="images/logo_hoofbeat.png" alt="logo">
         <h1>Hoofbeat</h1>
+        
     </header>
     
     <div class="container">
+        
+        <div class="menu-toggle">
+            <div class="burger">
+                <span></span>
+            </div>
+        </div>
         <!--Left-box-->
         <?php require "template/hoofbeatnav.php"; ?>
         <!--Main-box-->
@@ -62,7 +69,7 @@
             ?>
                 <div class="feed tags_<?= $course['tag']?>">
                     <div class="feed__avatar">
-                        <img src="https://media.idownloadblog.com/wp-content/uploads/2017/03/Twitter-new-2017-avatar-001.png" alt="">
+                        <img class="img-responsive" src="https://media.idownloadblog.com/wp-content/uploads/2017/03/Twitter-new-2017-avatar-001.png" alt="">
                     </div>
                     <div class="feed__body">
                         <div class="feed__header">
