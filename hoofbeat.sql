@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : jeu. 29 juin 2023 à 08:49
+-- Généré le : ven. 30 juin 2023 à 11:58
 -- Version du serveur : 8.0.30
 -- Version de PHP : 8.1.10
 
@@ -43,7 +43,8 @@ CREATE TABLE `posts` (
 INSERT INTO `posts` (`id`, `author_id`, `contenu`, `images`, `tag`, `date`) VALUES
 (123, 7, 'Un coucours au top aujourd\'hui !', 0x696d616765732f686f727365706f7374322e6a7067, '#Compétition', '2023-06-28 15:49:15'),
 (124, 10, 'Il vous surveille ;)', 0x696d616765732f686f727365706f7374342e6a7067, '#Propriétaire', '2023-06-28 15:51:08'),
-(125, 9, 'Toujours concentrée', 0x696d616765732f686f727365706f7374352e6a7067, '#Dressage', '2023-06-28 15:55:35');
+(125, 9, 'Toujours concentrée', 0x696d616765732f686f727365706f7374352e6a7067, '#Dressage', '2023-06-28 15:55:35'),
+(129, 9, 'Vrai mannequin ', 0x696d616765732f686f727365706f73742e6a7067, '#Random', '2023-06-29 15:50:19');
 
 -- --------------------------------------------------------
 
@@ -93,7 +94,7 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateurs`
