@@ -29,6 +29,11 @@
         
         <div class="profil">
             
+            <div class="menu-toggle">
+                <div class="burger">
+                    <span></span>
+                </div>
+            </div>
             <section class="profil__header">
                 <h2>Voici ton profil</h2>
             </section>
@@ -112,8 +117,8 @@
                 <li>TAP</li>
                 <li>Loisirs</li>
             </ul>
-        </section>
-                                    
+        </section>                        
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
