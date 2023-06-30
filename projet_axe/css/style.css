@@ -13,7 +13,7 @@
 }
 
 body {
-    --main-color: #5715a2;
+    --main-color: rgb(87, 21, 162);
     --background-color: rgb(214, 196, 214);
     --back: rgba(208, 176, 208, 0.209);
 }
@@ -118,6 +118,17 @@ body {
     transition: 100ms ease-out;
 }
 
+.post-box__input select {
+    margin: 5px;
+}
+
+.post-box__images input {
+    margin: 10px;
+    font-size: 18px;
+    background-color: var(--back);
+    border: none;
+}
+
 /* Feed */
 
 .feed__avatar img {
@@ -205,6 +216,16 @@ body {
 
 .right-box__tag h2 {
     font-size: 25px;
+    font-weight: 700;
+}
+
+.right-box__tag button {
+    font-size: 15px;
+    margin: 4px;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    color: var(--main-color);
     font-weight: 700;
 }
 
