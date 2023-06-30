@@ -91,7 +91,6 @@ body {
     
     height: 100%;
     
-    min-width: 700px;
     overflow-y: auto;
 }
 
@@ -296,46 +295,26 @@ body {
 
 @media screen and (max-width:800px) {
     body {
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-    }
-    .left-box{
-        display: flex;
-        justify-content: center;
-    }
-    .main{
-        display: flex;
         width: 100vw;
     }
-
+    
+    .left-box{
+        display: none;
+    }
+    
     .main__header{
         display: none;
     }
-    .form{
-        width: 100vw;
-    }
-    .post-box__input img{
+
+    .post-box {
         display: none;
     }
 
-    .post-box__input{
-        margin-top: 10px;
-        box-sizing: border-box;
-    }
-
-    .options h2 {
-        display: none;
-    }   
-    
-    .post-box__post-button{
-        display: none;
-    }
-    .post-box{
+    .main {
         width: 100vw;
     }
 
-    .right-box__tag h2{
+    .right-box {
         display: none;
     }
 }
