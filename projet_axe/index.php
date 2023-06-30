@@ -33,6 +33,7 @@
             <div class="burger">
                 <span></span>
             </div>
+
         </div>
         <!--Left-box-->
         <?php require "template/hoofbeatnav.php"; ?>
@@ -42,11 +43,26 @@
                 <h2>Accueil</h2>
             </div>
             <div class="post-box">
-                <form class="form" method="POST" action="post.php">
+                <form class="form" method="POST" action="post.php" enctype="multipart/form-data">
                     <div class="post-box__input">
                         <img src="https://media.idownloadblog.com/wp-content/uploads/2017/03/Twitter-new-2017-avatar-001.png" alt="avatar">
-                        <input type="text" name="contenu" placeholder="Quoi de neuf ?">
-                        <input type="text" name="tag" placeholder="#">
+                        <input type="text" name="contenu" placeholder="Quoi de neuf ?" id="contenu">
+                        <select class="chooseTag" name="tag" id="tag" required>
+                            <option value="">#</option>
+                            <option id="tag1">#Ethologie</option>
+                            <option id="tag2">#Bien être</option>
+                            <option id="tag3">#Saut</option>
+                            <option id="tag4">#Random</option>
+                            <option id="tag5">#Dressage</option>
+                            <option id="tag6">#Club</option>
+                            <option id="tag7">#Propriétaire</option>
+                            <option id="tag8">#Compétition</option>
+                            <option id="tag9">#TAP</option>
+                            <option id="tag10">#Loisirs</option>
+                        </select>
+                    </div>
+                    <div class="post-box__images">
+                        <input type="file" accept="image/jpg, image/png, image/gif" name="images">
                     </div>
                     <button class="post-box__post-button">Post</button>
                 </form>
@@ -149,14 +165,6 @@
                 <button class="tags">#TAP</button>
                 <button class="tags">#Loisirs</button>
             </div>
-        </div>
-    </div>
-    <div class="modal">
-        <div class="modal-content">
-            <form class="form" method="POST" action="post.php">
-                <span class="close">&times;</span>
-                <button class="post-box__post-button">Post</button>
-            </form>
         </div>
     </div>
     

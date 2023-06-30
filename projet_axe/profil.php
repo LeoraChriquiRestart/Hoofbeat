@@ -103,21 +103,26 @@
                 <?php } ?>
             <?php } ?>
         </div>
-        <section class="profil__tags">
-            <h2>Tags</h2>
-            <ul>
-                <li>Ethologie</li>
-                <li>Bien être</li>
-                <li>Saut</li>
-                <li>Random</li>
-                <li>Dressage</li>
-                <li>Club</li>
-                <li>Propriétaire</li>
-                <li>Competition</li>
-                <li>TAP</li>
-                <li>Loisirs</li>
-            </ul>
-        </section>                        
+        <div class="right-box">
+            <div class="right-box__input">
+                <span class="material-symbols-outlined right-box__search-icon">search</span>
+                <input type="text" placeholder="Rechercher">
+            </div>
+            <div class="right-box__tag">
+                <h2>Tags</h2>
+                <button class="tags">Tout</button>
+                <button class="tags">#Ethologie</button>
+                <button class="tags">#Bien être</button>
+                <button class="tags">#Saut</button>
+                <button class="tags">#Random</button>
+                <button class="tags">#Dressage</button>
+                <button class="tags">#Club</button>
+                <button class="tags">#Propriétaire</button>
+                <button class="tags">#Compétition</button>
+                <button class="tags">#TAP</button>
+                <button class="tags">#Loisirs</button>
+            </div>
+        </div>                        
     </div>
     <script src="main.js"></script>
 </body>
