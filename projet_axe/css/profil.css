@@ -10,8 +10,6 @@
     border-right: 1px solid var(--background-color);
     
     height: 100%;
-    
-    min-width: fit-content;
 }
 
 .profil{
@@ -95,4 +93,32 @@
 .profil__tags h2 {
     font-size: 25px;
     font-weight: 700;
+}
+
+@media screen and (max-width:800px) {
+    
+    .profil-container{
+        width: 100vw;
+    }
+
+    .profil{
+        flex: 1;
+        width: 100vw;
+    }
+
+    .profil__post-avatar img {
+        width: 10vw;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .profil__post-body img{
+        width: 70vw;
+        object-fit: contain;
+        border-radius: 20px;
+    }
+
+    .profil__tags {
+        display: none;
+    }
 }

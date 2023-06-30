@@ -121,3 +121,21 @@
 .modal__flou.visible {
   transform: scale(1);
 }
+
+@media screen and (max-width:800px) {
+  .modal-content {
+    width: 90%;
+  }
+
+  .post-box__input {
+    flex-direction: column;
+  }
+
+  .post-box__input img {
+    display: none;
+  }
+
+  .post-box__input input {
+    margin-bottom: 20px;
+  }
+}
